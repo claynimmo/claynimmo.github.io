@@ -1,3 +1,6 @@
+---
+title: Portfolio | Software Projects
+---
 
 [Home](../../index.md) / 
 

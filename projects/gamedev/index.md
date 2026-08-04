@@ -1,3 +1,6 @@
+---
+title: Portfolio | Game Development
+---
 
 [Home](../../index.md) /
 

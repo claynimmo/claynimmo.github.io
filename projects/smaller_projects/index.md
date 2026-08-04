@@ -1,3 +1,6 @@
+---
+title: Portfolio | Smaller Projects
+---
 
 [Home](../../index.md) /
 
