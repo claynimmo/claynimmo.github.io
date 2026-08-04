@@ -8,7 +8,7 @@ title: Portfolio | Software Projects
 
 <table class="table-card">
   <tr>
-    <td style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+    <td>
       <strong>Fitcast:</strong><br>
       https://github.com/claynimmo/CAB302-Assessment FitCast combines weather and clothing data to recommend the most comfortable outfit for the day. The app was developed in Java, in a team of 6 prioritizing the agile development process. I took the role of the lead programmer, ensuring that the other member's code integrated well into the project focusing on scalability.
     <br><br>
@@ -20,15 +20,15 @@ title: Portfolio | Software Projects
   </tr>
 </table>
 
-<table style="width:100%; margin-bottom: 30px;">
+<table class="table-card">
   <tr>
-    <td style="padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px;">
+    <td>
       <strong>AI Prompt Mindmapping Tool</strong><br>
       https://github.com/claynimmo/CAB302-Assessment FitCast combines weather and clothing data to recommend the most comfortable outfit for the day. The app was developed in Java, in a team of 6 prioritizing the agile development process. I took the role of the lead programmer, ensuring that the other member's code integrated well into the project focusing on scalability.
     <br><br>
     <a href="rebirthoftheforsaken.html">More details</a>
     </td>
-    <td style="vertical-align: top; text-align: right; width: 30%;">
+    <td class="table-card-side">
         <strong>Golang, Dart, Flutter</strong>
     </td>
   </tr>
