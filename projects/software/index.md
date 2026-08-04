@@ -1,5 +1,7 @@
 [Back to Home](../../index.md)
 
+### Software Projects
+
 **FitCast:** https://github.com/claynimmo/CAB302-Assessment FitCast combines weather and clothing data to recommend the most comfortable outfit for the day. The app was developed in Java, in a team of 6 prioritizing the agile development process. I took the role of the lead programmer, ensuring that the other member's code integrated well into the project focusing on scalability.
 
 **AI Prompt Mindmapping Tool:** https://github.com/claynimmo/AI-prompt-mindmapping-tool The tool is developed using a go backed, Flutter frontend, and an api connection to an ollama model. The app delinearizes the LLM chat messages, where the user makes use of a directed graph to customize what context is used, allowing easy backtracking.
