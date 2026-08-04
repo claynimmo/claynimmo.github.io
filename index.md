@@ -1,6 +1,6 @@
 ### Portfolio - Clay Nimmo
 
-### [ - Game Development Projects](projects/game/index.md)
+### [ - Game Development Projects](projects/gamedev/index.md)
 
 ### [ - Software Projects](projects/software/index.md)
 

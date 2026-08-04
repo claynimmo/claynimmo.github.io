@@ -1,4 +1,5 @@
-[Back to Home](../../index.md)
+
+[Home](../../index.md) /
 
 ### Smaller Projects
 These projects represent small >1000 lines of code projects to demonstrate my ability to program using a given language.
