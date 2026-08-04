@@ -4,7 +4,10 @@
 }
 
 .table-card td{
-    padding: 20px; border: 1px solid #c4c8ce; border-radius: 6px;
+    padding: 20px; 
+    border: 1px solid #d6d9dd; 
+    border-radius: 6px;
+    background-color: #e5e8ec;
 }
 .table-card-side{
     vertical-align: top; text-align: right; width: 30%;
