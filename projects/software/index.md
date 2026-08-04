@@ -14,7 +14,7 @@ title: Portfolio | Software Projects
     <br><br>
     <a href="rebirthoftheforsaken.html">More details</a>
     </td>
-    <td style="vertical-align: top; text-align: right; width: 30%;">
+    <td class="table-card-side">
         <strong>Java, JUnit, SQLite</strong>
     </td>
   </tr>
