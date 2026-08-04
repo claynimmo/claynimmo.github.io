@@ -1,2 +1,11 @@
 theme: jekyll-theme-cayman
 title: Portfolio
+
+include:
+  - assets/css/custom.css
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      css: "/assets/css/custom.css"
