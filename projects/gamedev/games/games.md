@@ -4,12 +4,15 @@ title: Portfolio | Games
 
 [Home](../../../index.md) / [Game Development](../index.md) /
 
+### Games
+
+I have published several games to my itch.io [profile](https://nimclay.itch.io/) across eight years of development in the Unity engine. I aimed to tailor each project to developing a few core skills.
 
 <table class="table-card">
   <tr>
     <td>
       <strong>Rebirth of the Forsaken:</strong><br>
-      My highest quality game, that represents my skills the best. It is a sequel to Greenbird Simulator, where it has improved visuals, level design, mechanics, and the addition of boss fights and a proper combat system. I have supported this game with several post launch updates to improve the game with new features and bug fixes, based on user feedback. The project is too large to make public, but I have published sections of the code into importable packages for both the UI (https://github.com/claynimmo/Custom-UI-Package-for-Unity-Engine) and the character controls (https://github.com/claynimmo/3D-Platformer-Package-for-Unity)
+      A large open world 3D platformer with rougelite elements. The player must balance raising and protecting children with exploring, growing stronger, and defeating the governing deities. The game has approximately 25 hours of content to experience everything fully.
     <br><br>
     <a href="rebirthoftheforsaken.html">More details</a>
     </td>
@@ -37,7 +40,7 @@ title: Portfolio | Games
   <tr>
     <td>
       <strong>Achromatized:</strong><br>
-      A third person shooter where you steal the colour from randomly spawned rooms (not procedurally generated)
+      A third person shooter where you steal the colour from randomly spawned rooms (not procedurally generated).
     <br><br>
     <a href="achromatized.html">More details</a>
     </td>
@@ -105,18 +108,3 @@ title: Portfolio | Games
     </td>
   </tr>
 </table>
-
-<table class="table-card">
-  <tr>
-    <td>
-      <strong>Reference Frame</strong><br>
-      A short platformer game, where I tried to play around with swapping between 2D and 3D platforming at any time.
-    <br><br>
-    <a href="referenceframe.html">More details</a>
-    </td>
-    <td class="table-card-side">
-        <img src="images/refframe.png" alt="game icon" style="max-width: 100%; border-radius: 6px;">
-    </td>
-  </tr>
-</table>
-
