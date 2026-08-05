@@ -33,7 +33,7 @@ The game demonstrates skills in:
 
 ## Music
 
-As a crucial part of game feel, I have composed 13 different music tracks for the game. I used the free LMMS software to compose the tracks, making use of various effects and layering instruments to create simple, yet effect, sounds for my game. The full soundtrack, excluding the newer tracks added in updates, is uploaded to my youtube channel.
+As a crucial part of game feel, I have composed 13 different music tracks for the game. I used the free LMMS software to compose the tracks, making use of various effects and layering instruments to create simple, yet effective, sounds for my game. The full soundtrack, excluding the newer tracks added in updates, is uploaded to my youtube channel. My personal favourite track is the Sky Palace.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pci5J7z0klY?si=BYIP80zEggAoIq5j" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -58,8 +58,9 @@ The game was developed targeting the Universal Render Pipeline, due to its compa
 
 ## Post Launch Updates
 
-The game was supported with two major post launch updates adding a large amount of features, and addressing some user feedback. The updates were given change logs:
+The game was supported with two major post launch updates adding a large number of features, and addressing some user feedback. The updates were given change logs:
 
 - [Version 1.1.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1309756/rebirth-of-the-forsaken-v110-patch-notes)
 - [Version 1.2.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1458525/rebirth-of-the-forsaken-v120-patch-notes)
+
 
