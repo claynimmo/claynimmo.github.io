@@ -44,10 +44,14 @@ As a crucial part of game feel, I have composed 13 different music tracks for th
 The game was developed targeting the Universal Render Pipeline, due to its compatibility with shader graph and the ability to use full screen render features. I have created a water, edge pulse, tornado, aurora, scrolling texture, screen tint, screen vignette, and a world tiling shader. The shaders were created using shadergraph, as learning the hlsl language is too time consuming. The world tiling shader was originally written in hlsl before being converted to shadergraph, so it could more easily inherit the lighting and shadow render settings.
 
 <div class="scroll-container">
-  <img src="images/achromatized.png" alt="Shader1">
-  <img src="images/foglights.png" alt="Shader">
-  <img src="images/midnightbowling.png" alt="Shader">
-  <img src="images/refframe.png" alt="Shader">
+  <img src="images/watershader.gif" alt="Water shader">
+  <img src="images/aurora.gif" alt="Aurora shader">
+  <img src="images/eclipse.gif" alt="Eclipse shader">
+  <img src="images/edgepulser.gif" alt="Edge pulser shader">
+  <img src="images/scrollingtext.gif" alt="Scrolling shader">
+  <img src="images/tornado1.gif" alt="Tornado shader 1">
+  <img src="images/tornado2.gif" alt="Tornado shader 2">
+  <img src="images/worldtile.png" alt="World tile shader">
 </div>
 
 ![Shadergraph screenshot of EdgePulser](images/edgepulsershader.png)
