@@ -4,6 +4,7 @@ title: Portfolio | Packages
 
 [Home](../../../index.md) / [Game Development](../index.md) /
 
+This page contains the links to the publicly available, ready to import, packages I have made for the Unity Engine. To learn how to import the packages, see the following [guide](packageguide.md)
 <table class="table-card">
   <tr>
     <td>

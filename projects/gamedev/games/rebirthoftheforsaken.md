@@ -56,10 +56,9 @@ The game was developed targeting the Universal Render Pipeline, due to its compa
 
 ![Shadergraph screenshot of EdgePulser](images/edgepulsershader.png)
 
-
 ## Post Launch Updates
 
-The game was supported with two major post launch updates adding a large amount of features, and adressing some user feedback. The updates were given change logs:
+The game was supported with two major post launch updates adding a large amount of features, and addressing some user feedback. The updates were given change logs:
 
 - [Version 1.1.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1309756/rebirth-of-the-forsaken-v110-patch-notes)
 - [Version 1.2.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1458525/rebirth-of-the-forsaken-v120-patch-notes)
