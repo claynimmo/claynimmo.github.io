@@ -22,7 +22,7 @@ This page contains the links to the publicly available, ready to import, package
       <strong>Custom UI Package</strong><br>
       (https://github.com/claynimmo/Custom-UI-Package-for-Unity-Engine) UI Package encapsulating some the the UI used in Rebirth of the Forsaken
     <br><br>
-    <a href="customuipackage.html">More details</a>
+    <a href="customuipackage.html">More details (WIP)</a>
     </td>
   </tr>
 </table>
@@ -33,7 +33,7 @@ This page contains the links to the publicly available, ready to import, package
       <strong>3D Platformer Package</strong><br>
       (https://github.com/claynimmo/3D-Platformer-Package-for-Unity) UI Package encapsulating some of the platform and movement types used in Rebirth of the Forsaken
     <br><br>
-    <a href="3dplatformerpackage.html">More details</a>
+    <a href="3dplatformerpackage.html">More details (WIP)</a>
     </td>
   </tr>
 </table>

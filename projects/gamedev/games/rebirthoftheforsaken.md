@@ -8,6 +8,8 @@ title: Portfolio | Rebirth of the Forsaken
 
 A large open world 3D platformer with rougelite elements. The player must balance raising and protecting children with exploring, growing stronger, and defeating the governing deities. The game has approximately 25 hours of content to experience everything fully.
 
+The game was published on March 15th, 2026
+
 <iframe frameborder="0" src="https://itch.io/embed/4067635" width="552" height="167"><a href="https://nimclay.itch.io/rebirth-of-the-forsaken">Rebirth of the Forsaken by nimclay</a></iframe>
 
 This is my highest quality game, that represents my skills the best. It is a sequel to [Greenbird Simulator](greenbirdsim.md), where it has improved visuals, level design, mechanics, optimisation, and the addition of boss fights and a proper combat system. I have supported this game with several post launch updates to improve the game with new features and bug fixes, based on user feedback. The project is too large to curate the source code and make public, but I have published sections of the code into importable packages for both the [UI](../packages/customuipackage.md) and the [3D platformer mechanics](../packages/3dplatformerpackage.md)
