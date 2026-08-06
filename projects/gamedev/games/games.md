@@ -28,7 +28,7 @@ I have published several games to my itch.io [profile](https://nimclay.itch.io/)
       <strong>FogLights:</strong><br>
       A third person atmospheric horror experience targeting megalophobia, making use of volumetric fog lighting to silhouette large monsters. The game is made on top of the code for Subatomic, making use of the fully 3D character movement. This game was made with the purpose to expand my skills storytelling and game progression, while having a clear objective and an ending.
     <br><br>
-    <a href="foglights.html">More details (WIP)</a>
+    <a href="foglights.html">More details</a>
     </td>
     <td class="table-card-side">
         <img src="images/foglights.png" alt="game icon" style="max-width: 100%; border-radius: 6px;">
