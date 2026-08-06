@@ -42,7 +42,7 @@ I have published several games to my itch.io [profile](https://nimclay.itch.io/)
       <strong>Achromatized:</strong><br>
       A third person shooter where you steal the colour from randomly spawned rooms (not procedurally generated).
     <br><br>
-    <a href="achromatized.html">More details (WIP)</a>
+    <a href="achromatized.html">More details</a>
     </td>
     <td class="table-card-side">
         <img src="images/achromatized.png" alt="game icon" style="max-width: 100%; border-radius: 6px;">
