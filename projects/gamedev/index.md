@@ -10,8 +10,7 @@ Over the past 8 years, have been developing games in the Unity Engine using C#, 
 
 ---
 
-### [- Games](games/games.md)
-
----
-
-### [- Packages](packages/packages.md)
+<div class="navbutton-container">
+  <a href="games/games.html" class="navbutton">Games</a>
+  <a href="packages/packages.html" class="navbutton">Packages</a>
+</div>

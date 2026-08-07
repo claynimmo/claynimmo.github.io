@@ -58,6 +58,35 @@ header h1 {
     vertical-align: top; text-align: right; width: 30%;
 }
 
+.navbutton-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  justify-content: center;
+}
+
+.navbutton {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 190px;  
+  height: 120px;
+  padding: 12px;
+  background-color: #185a9d;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 16px #185a9d;
+  text-align: center;
+  font-size: 20px;
+}
+.navbutton:hover{
+  background-color: #058753;
+  box-shadow: 0 0 16px #058753;
+  text-decoration: none;
+}
+
 div.scroll-container {
   background-color: #333;
   overflow: auto;

@@ -1,18 +1,20 @@
 ---
 layout: default
-title: My Portfolio
+title: Portfolio | Clay Nimmo
 ---
 
 
-# Portfolio - Clay Nimmo
+# Portfolio
 
-### [ - Game Development Projects](projects/gamedev/index.md)
+<br>
 
-### [ - Software Projects](projects/software/index.md)
+<div class="navbutton-container">
+  <a href="projects/gamedev/index.html" class="navbutton">Game Development</a>
+  <a href="projects/software/index.html" class="navbutton">Software</a>
+  <a href="projects/smaller_projects/index.html" class="navbutton">Small Projects</a>
+  <a href="projects/engineering/index.html" class="navbutton">Engineering</a>
+</div>
 
-### [ - Smaller Software Projects](projects/smaller_projects/index.md)
-
-### [ - Engineering Projects](projects/engineering/index.md)
 
 ---
 

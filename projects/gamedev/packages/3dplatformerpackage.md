@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Portfolio |  3D Platformer Package
 ---
 
