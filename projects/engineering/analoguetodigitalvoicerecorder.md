@@ -1,10 +1,11 @@
 ---
+layout: default
 title: Portfolio |  Analogue to Digital Voice Recorder
 ---
 
-[Home](../../../index.md) / [Engineering](index.md) /
+[Home](../../index.md) / [Engineering](index.md) /
 
-### Analogue to Digital Voice Recorder
+# Analogue to Digital Voice Recorder
 
 The analogue to digital voice recorder is an extended university project, where the input conditioning circuit for a microphone is designed for specific filter characters, namely requiring a reasonable gain and an anti-aliasing filter to attenuate fully for 8 bits. The project was extended to include the digital recording by sampling the output voltage using an Arduino’s input pins, in which the sampled voltage was sent through serial to a python script. Serial transfer is required, as the Arduino has too small memory to properly store a sizeable audio recording.
 

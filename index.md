@@ -1,3 +1,9 @@
+---
+layout: default
+title: My Portfolio
+---
+
+
 # Portfolio - Clay Nimmo
 
 ### [ - Game Development Projects](projects/gamedev/index.md)
@@ -8,6 +14,7 @@
 
 ### [ - Engineering Projects](projects/engineering/index.md)
 
+---
 
 ## Featured
 <table class="table-card">

@@ -1,0 +1,70 @@
+---
+---
+
+@import "jekyll-theme-cayman";
+
+* {
+    transition: all 0.25s ease;
+}
+
+hr {
+  background: linear-gradient(45deg, #43cea2, #185a9d) border-box !important;
+}
+body {
+    background-color: #0f1115 !important;
+}
+
+p {
+  color: rgb(189, 186, 186) !important;
+}
+
+body h1, body h2, body h3, h4, h5, h6 {
+    color: #5f9ee3;
+}
+
+header h1 {
+  color: white;
+}
+
+.table-card {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #43cea2, #185a9d) border-box !important;
+    
+}
+
+.table-card td{
+    padding: 20px; 
+    border: 1px solid #1c1c1c !important; 
+    background-color: #0f1115;
+    border-collapse: separate;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.25);
+    border-width: 3px !important;
+    
+    color: rgb(222, 220, 220) !important;
+}
+
+.table-card td strong{
+  color: #5f9ee3;
+}
+
+.table-card a{
+  color:#ffbe45;
+}
+
+.table-card-side{
+    vertical-align: top; text-align: right; width: 30%;
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}

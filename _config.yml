@@ -8,4 +8,4 @@ defaults:
   - scope:
       path: ""
     values:
-      css: "/assets/css/custom.css"
+      css: "/assets/css/style.scss"
