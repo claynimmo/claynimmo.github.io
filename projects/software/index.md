@@ -58,7 +58,7 @@ title: Portfolio | Software Projects
     <a href="basicimageprocessing.html">More details (WIP)</a>
     </td>
     <td class="table-card-side">
-        <strong>Golang, Dart, Flutter</strong>
+        <strong>C#</strong>
     </td>
   </tr>
 </table>
