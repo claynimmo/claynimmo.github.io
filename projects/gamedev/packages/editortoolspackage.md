@@ -26,7 +26,7 @@ The duplicate tool appears around the bounds of the selected object, that duplic
 
 The tool inherits from EditorTool to perform actions on the currently selected object in the editor, given the tool is selected. It uses the OnToolGUI handle as the entry point:
 
-```C#
+```csharp
 public override void OnToolGUI(EditorWindow window){
     if (!Selection.activeTransform) return; // do nothing if no object is selected
 
@@ -41,7 +41,7 @@ public override void OnToolGUI(EditorWindow window){
 
 The draw bounds function works by using the built in MeshFilter component, where it loops over every filter on itself and its children, to get the bounds by calling MeshFilter.bounds. These bounds are then mapped into Vector3 coordinates so that editor lines can be drawn between them. Additionally, the bounds are used to compute faces, in which an arrow facing outward from the face is added:
 
-```C#
+```csharp
 void DrawPerChildBounds(Transform root){
     MeshFilter[] filters = root.GetComponentsInChildren<MeshFilter>();
 
@@ -112,7 +112,7 @@ void DrawPerChildBounds(Transform root){
 
 The draw face arrow function includes the event handler for when it is clicked, where it computes the depth along the face normal to set the position of the cloned object. The cloned object is then registered into undo, otherwise the action cannot be reverse:
 
-```C#
+```csharp
  void DrawFaceArrow(Vector3[] face, Vector3[] allCorners, Transform root, Transform currentObject){
     // face center (sum all corners, and divide by 4)
     Vector3 center = (face[0] + face[1] + face[2] + face[3]) / 4;
@@ -171,7 +171,7 @@ The UI positioning tool automatically sets the screen view into 2D mode, showing
 
 The positioning tool uses the bounds of all enabled rect transforms in the canvas, by getting its 4 corners through RectTransform.GetWorldCorners. The snapping works simply by taking the distance from the corners to the guideline, and snapping if it is close enough:
 
-```C#
+```csharp
 Vector3[] corners = new Vector3[4];
 rt.GetWorldCorners(corners);
 
@@ -227,20 +227,20 @@ Since both the snapping and movement write to the same value, to avoid jittering
 
 Creating hierarchy tools is fairly trivial, hence the much larger amount available in the package compared to other tool types. To create a hierarchy tool, you simply need to add a tag to a method:
 
-```C#
+```csharp
 [MenuItem("GameObject/Tools/Parent/Centre to Children", false, 0)]
 public static void CentreParentToChildren(){}
 ```
 Where the string is simply the path the tool appears in the right click menu. Then, to control when the tool is available, simply create a separate function returning bool with the same tag, but setting the flag to true:
 
-```C#
+```csharp
 [MenuItem("GameObject/Tools/Parent/Centre to Children", true)]
 private static bool CentreParentToChildren_Validate(){}
 ```
 
 Since the hierarchy tool needs a target object, this is simply obtained by reading Selection.activeTransform
 
-```C#
+```csharp
 Transform selected = Selection.activeTransform;
 ```
 ## Preferences

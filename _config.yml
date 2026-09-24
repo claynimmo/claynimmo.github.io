@@ -4,6 +4,12 @@ title: Portfolio
 include:
   - assets/css/custom.css
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 defaults:
   - scope:
       path: ""

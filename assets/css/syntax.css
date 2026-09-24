@@ -1,0 +1,87 @@
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #d8d8d8 !important;
+  background-color: #111111 !important;
+}
+.highlight .err {
+  color: #181818 !important;
+  background-color: #ab4642 !important;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: 	#7CA668 !important;
+}
+.highlight .cp {
+  color: #f7ca88 !important;
+}
+.highlight .nt {
+  color: #f7ca88 !important;
+}
+.highlight .o, .highlight .ow {
+  color: #d8d8d8 !important;
+}
+.highlight .p, .highlight .pi {
+  color: #d8d8d8 !important;
+}
+.highlight .gi {
+  color: #a1b56c !important;
+}
+.highlight .gd {
+  color: #ab4642 !important;
+}
+.highlight .gh {
+  color: #7cafc2 !important;
+  background-color: #181818 !important;
+}
+.highlight .ge {
+  font-style: italic !important;
+}
+.highlight .ges {
+  font-style: italic !important;
+}
+
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: 	#569CD6 !important;
+  font-weight: normal !important;
+}
+.highlight .kc {
+  color: #dc9656 !important;
+}
+.highlight .kt {
+  color: #dc9656 !important;
+}
+.highlight .kd {
+  color: #dc9656 !important;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: 	#CE9178 !important;
+}
+.highlight .sa {
+  color: #ba8baf !important;
+}
+.highlight .sr {
+  color: #86c1b9 !important;
+}
+.highlight .si {
+  color: #a16946 !important;
+}
+.highlight .se {
+  color: #a16946 !important;
+}
+.highlight .nf, .nc, .no {
+  color: 	#DCDCAA !important;
+  font-weight: normal !important;
+}
+.highlight .n {
+  color: 	#9CDCFE !important;
+}
+
+.highlight .na {
+  color: #7cafc2 !important;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #a1b56c !important;
+}
+.highlight .ss {
+  color: #a1b56c !important;
+}

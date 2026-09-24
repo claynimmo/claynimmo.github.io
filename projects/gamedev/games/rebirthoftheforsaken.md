@@ -3,6 +3,8 @@ layout: default
 title: Portfolio | Rebirth of the Forsaken
 ---
 
+<script>hljs.initHighlightingOnLoad();</script>
+
 [Home](../../../index.md) / [Game Development](../index.md) / [Games](games.md) /
 
 # Rebirth of the Forsaken
@@ -70,5 +72,4 @@ After performing a target audience analysis, it was determined that users on itc
 - [Version 1.1.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1309756/rebirth-of-the-forsaken-v110-patch-notes)
 - [Version 1.2.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1458525/rebirth-of-the-forsaken-v120-patch-notes)
 - [Version 1.3.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1633754/rebirth-of-the-forsaken-v130-change-log)
-
 

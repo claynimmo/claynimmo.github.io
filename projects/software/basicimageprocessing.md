@@ -18,7 +18,7 @@ the png file format is decoded in programming languages as a singular large byte
 
 The main code to extract the pixel data is given in the following function, where the variables are stored in global variables to be retrieved later from getters:
 
-```C#
+```csharp
 public ImageLoader(string filePath){
     try{
         imageMap = new Bitmap(filePath);
@@ -45,7 +45,7 @@ public ImageLoader(string filePath){
 
 ## Saturation
 There are many ways to modify the saturation of a colour pixel, but the method I used was to convert from RGB to HSL format, as saturation was one of the parameters. So, changing the saturation is as simple as converting to HSL, adjusting the S value, and converting back to RGB. The function to convert to HSE is given:
-```C#
+```csharp
 public static (float, float, float) RGB_To_HSL(float red, float green, float blue){
     blue  /= 255;
     green /= 255;
@@ -85,7 +85,7 @@ public static (float, float, float) RGB_To_HSL(float red, float green, float blu
 
 ## Blur
 Blur is achieved by setting the colour value of a pixel to the average of its neighbors. Since the pixel values are no longer independent, the average colour values for each pixel must be written to a temporary array instead of asjusting the values in place. The code to compute the average for a cell is given:
-```C#
+```csharp
  private byte[] GetAverageColourByBlock(byte[] pixels, int xCoord, int yCoord, int imageStride, int bytesPerPixel,int imageHeight, int imageWidth){
     int newWidth = (int)Math.Floor((double)matrixWidth/2); //half the value, so it is added and subracted from the middle pixel (only works properly if odd, since the lost 0.5 is the starting pixel);
     int minX = (xCoord - newWidth >= 0) ? xCoord-newWidth : 0;
