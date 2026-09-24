@@ -23,11 +23,7 @@ These projects represent small <1000 lines of code projects to demonstrate my ab
 {% endfor %}
 </div>
 
-{% assign subdirs = site.pages 
-   | where_exp: "p", "p.dir contains page.dir and p.dir != page.dir" 
-   | map: "dir" 
-   | uniq 
-%}
+{% assign subdirs = site.pages | where_exp: "p", "p.dir contains page.dir and p.dir != page.dir" | map: "dir" | uniq %}
 
 {% for dir in subdirs %}
   {% assign folder_name = dir | split: "/" | last %}
