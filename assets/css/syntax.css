@@ -40,34 +40,19 @@
   font-style: italic !important;
 }
 
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+.highlight .k, .highlight .kt, .highlight .kd, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
   color: 	#569CD6 !important;
   font-weight: normal !important;
 }
-.highlight .kc {
-  color: #dc9656 !important;
-}
-.highlight .kt {
-  color: #dc9656 !important;
-}
-.highlight .kd {
-  color: #dc9656 !important;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+
+.highlight .s, .highlight .sa, .highlight .si, .highlight .se, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
   color: 	#CE9178 !important;
 }
-.highlight .sa {
-  color: #ba8baf !important;
-}
+
 .highlight .sr {
   color: #86c1b9 !important;
 }
-.highlight .si {
-  color: #a16946 !important;
-}
-.highlight .se {
-  color: #a16946 !important;
-}
+
 .highlight .nf, .nc, .no {
   color: 	#DCDCAA !important;
   font-weight: normal !important;
