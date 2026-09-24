@@ -63,7 +63,12 @@ The game was developed targeting the Universal Render Pipeline, due to its compa
 
 The game was supported with two major post launch updates adding a large number of features, and addressing some user feedback. The updates were given change logs:
 
+## Web Build
+
+After performing a target audience analysis, it was determined that users on itch very rarely download games due to security risks, but are much more likely to at least try the game if it is a web build hosted on the site. So, to expand the audience, a web build demo was created. The demo only included the tutorial, as the web build could not render any of the visual effects, and even transparency in some cases, so redisigning the entire game for compatibility was not worth it. 
+
 - [Version 1.1.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1309756/rebirth-of-the-forsaken-v110-patch-notes)
 - [Version 1.2.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1458525/rebirth-of-the-forsaken-v120-patch-notes)
+- [Version 1.3.0](https://nimclay.itch.io/rebirth-of-the-forsaken/devlog/1633754/rebirth-of-the-forsaken-v130-change-log)
 
 
