@@ -8,6 +8,8 @@ title: Portfolio |  Procedural Dungeon Generation
 # Dungeon Generation
 This code is the unity scripts used to procedurally generate a dungeon inside a grid structure. This file is longer, since there are several dependency scripts that must also be included here. The main important scripts are the main generation, and the hallway generation.
 
+<img src="images/generation.gif" alt="Map Generation">
+
 ## Main generation code
 ```csharp
 using System.Collections;
