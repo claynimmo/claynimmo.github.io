@@ -55,11 +55,11 @@
   color: #86c1b9 !important;
 }
 
-.highlight .nf, .nc, .no {
+.highlight .nf, .nc, .no, .highlight .nb{
   color: 	#DCDCAA !important;
   font-weight: normal !important;
 }
-.highlight .n {
+.highlight .n, .highlight .nn{
   color: 	#9CDCFE !important;
 }
 

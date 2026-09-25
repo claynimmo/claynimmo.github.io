@@ -6,7 +6,7 @@ title: Portfolio | Smaller Projects
 [Home](../../index.md) /
 
 ### Smaller Projects
-These projects represent small <1000 lines of code projects to demonstrate my ability to program using a given language.
+These projects represent small code snippets and projects to demonstrate my ability to program using a given language.
 
 <div class="navbutton-container">
 {% assign pages_in_folder = site.pages | where_exp: "p", "p.dir == page.dir" %}
@@ -39,7 +39,7 @@ These projects represent small <1000 lines of code projects to demonstrate my ab
   <table class="table-card">
     <tr>
       <td class="table-card-full" style="width:1000px">
-        <strong>{{ folder_name | replace: "-", " " | capitalize }}</strong><br><br>
+        <strong>{{ folder_name | replace: "-", " "}}</strong><br><br>
         <div class="navbutton-container">
         {% for f in files %}
           {% unless f.name == "index.md" %}
