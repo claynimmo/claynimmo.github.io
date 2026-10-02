@@ -55,9 +55,10 @@ I have published several games to my itch.io [profile](https://nimclay.itch.io/)
   <tr>
     <td>
       <strong>Greenbird Simulator:</strong><br>
-      My first major game. It is a third person semi-open world platformer where you try to raise children for as possible. The game has two main levels, and several unlockable level variations. It also includes dozens of linear levels, with hidden unlockable skins and powerups. This game is my first main experience working on a large project, letting me see first hand how poor coding practices build over time. The source code is made public, but does not represent my current programming skills (it is just to give context on how many files I have to work across): https://github.com/claynimmo/GreenBird-Simulator-Source-Code. This does not include the level design, modelling, animations, music, shaders etc, so this only represents about 15% of the total work that went into the game.
+      My first major game. It is a third person semi-open world platformer where you try to raise children for as possible. The game has two main levels, and several unlockable level variations. It also includes dozens of linear levels, with hidden unlockable skins and powerups. This game is my first main experience working on a large project, letting me see first hand how poor coding practices build over time. The source code is made public, but does not represent my current programming skills. This does not include the level design, modelling, animations, music, shaders etc, so this only represents about 15% of the total work that went into the game.
     <br><br>
-    <a href="greenbirdsim.html">More details</a>
+    <a href="greenbirdsim.html">More details</a><br>
+    <a href="https://github.com/claynimmo/GreenBird-Simulator-Source-Code">Source code</a>
     </td>
     <td class="table-card-side">
         <img src="images/greenbirdsim.png" alt="game icon" style="max-width: 100%; border-radius: 6px;">
@@ -88,7 +89,8 @@ I have published several games to my itch.io [profile](https://nimclay.itch.io/)
       <strong>Subatomic:</strong><br>
       A small scale team-based battle royal type game, where you control one atom and use your abilities to destroy the opposing team's atoms.
     <br><br>
-    <a href="subatomic.html">More details</a>
+    <a href="subatomic.html">More details</a><br>
+    <a href="https://github.com/claynimmo/Source-Code-for-Atomic">Source code</a>
     </td>
     <td class="table-card-side">
         <img src="images/Subatomic.png" alt="game icon" style="max-width: 100%; border-radius: 6px;">

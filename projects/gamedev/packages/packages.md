@@ -9,9 +9,10 @@ This page contains the links to the publicly available, ready to import, package
   <tr>
     <td>
       <strong>Editor Tools</strong><br>
-      (https://github.com/claynimmo/Unity-Editor-Tools-Package) A package including useful editor tools to speed up game development
+      A package including useful editor tools to speed up game development
     <br><br>
-    <a href="editortoolspackage.html">More details</a>
+    <a href="editortoolspackage.html">More details</a><br>
+    <a href="https://github.com/claynimmo/Unity-Editor-Tools-Package">Repository</a>
     </td>
   </tr>
 </table>
@@ -20,9 +21,10 @@ This page contains the links to the publicly available, ready to import, package
   <tr>
     <td>
       <strong>Custom UI Package</strong><br>
-      (https://github.com/claynimmo/Custom-UI-Package-for-Unity-Engine) UI Package encapsulating some the the UI used in Rebirth of the Forsaken
+      UI Package encapsulating some the the UI used in Rebirth of the Forsaken
     <br><br>
-    <a href="customuipackage.html">More details (WIP)</a>
+    <a href="customuipackage.html">More details (WIP)</a><br>
+    <a href="https://github.com/claynimmo/Custom-UI-Package-for-Unity-Engine">Repository</a>
     </td>
   </tr>
 </table>
@@ -31,9 +33,10 @@ This page contains the links to the publicly available, ready to import, package
   <tr>
     <td>
       <strong>3D Platformer Package</strong><br>
-      (https://github.com/claynimmo/3D-Platformer-Package-for-Unity) UI Package encapsulating some of the platform and movement types used in Rebirth of the Forsaken
+      UI Package encapsulating some of the platform and movement types used in Rebirth of the Forsaken
     <br><br>
-    <a href="3dplatformerpackage.html">More details (WIP)</a>
+    <a href="3dplatformerpackage.html">More details (WIP)</a><br>
+    <a href="https://github.com/claynimmo/3D-Platformer-Package-for-Unity">Repository</a>
     </td>
   </tr>
 </table>
