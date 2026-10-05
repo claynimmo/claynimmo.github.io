@@ -44,14 +44,12 @@ def load_tensor(unity_path):
 
 class MapDataset(Dataset):
     def __init__(self, samples_or_path):
-        # If it's a string, treat it as a file path
         if isinstance(samples_or_path, str):
             self.samples = []
             with open(samples_or_path, "r") as f:
                 for line in f:
                     self.samples.append(json.loads(line))
         else:
-            # Otherwise assume it's already a list of dicts
             self.samples = samples_or_path
 
     def __len__(self):

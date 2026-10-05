@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Portfolio |  Substring Search
