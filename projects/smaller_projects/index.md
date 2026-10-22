@@ -23,11 +23,13 @@ These projects represent small code snippets and projects to demonstrate my abil
 {% endfor %}
 </div>
 
+
 {% assign subdirs = site.pages
   | where_exp: "p", "p.dir contains page.dir"
   | where_exp: "p", "p.dir != page.dir"
   | map: "dir"
   | uniq
+  | sort
 %}
 
 
@@ -35,6 +37,7 @@ These projects represent small code snippets and projects to demonstrate my abil
   {% assign folder_name = dir | split: "/" | last %}
   {% assign files = site.pages | where_exp: "p", "p.dir == dir" %}
   {% assign files = files | sort: "name" %}
+
 
   <table class="table-card">
     <tr>

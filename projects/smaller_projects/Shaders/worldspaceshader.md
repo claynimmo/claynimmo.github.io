@@ -1,12 +1,18 @@
 ---
 layout: default
-title: Portfolio |  Worldspace Shader
+title: Portfolio |  Worldspace
 ---
 
 [Home](../../../../index.md) / [Smaller Projects](../index.md) /
 
 # Worldspace Shader
-This shader was written to tile textures on world scaling rather than local UVs, preventing stretching, making it easier to fit different size and shape components with the same material together.
+This shader was written to tile textures on world scaling rather than local UVs, preventing stretching, making it easier to fit different size and shape components with the same material together. The original hlsl code is given, but was converted to shader graph to natively support URP lighting
+
+<img src="/assets/files/shaders/images/worldtile.png" alt="Aurora shader">
+
+<a href="/assets/files/shaders/WorldTiling.shadergraph" download>
+    Download WorldTiling.shadergraph
+</a>
 
 ```hlsl
 Shader "Legacy Shaders/diffuse-worldspace-smooth" {
@@ -69,9 +75,7 @@ Shader "Legacy Shaders/diffuse-worldspace-smooth" {
             float4 _Color;
             float _Scale;
             float _Smoothness;
-
             
-
             Varyings vert (Attributes IN)
             {
                 Varyings OUT;
@@ -85,25 +89,25 @@ Shader "Legacy Shaders/diffuse-worldspace-smooth" {
                 return OUT;
             }
 
-            float3 MyLightingFunction(float3 albedo, float3 normalWS, Light light)
+            float3 Lighting(float3 albedo, float3 normalWS, Light light)
             {
                 float NdotL = dot(normalWS, normalize(light.direction));
                 NdotL = saturate((NdotL + 1) * 0.5);
                 return albedo * NdotL * light.color * light.distanceAttenuation * light.shadowAttenuation;
             }
 
-            float3 MyLightLoop(float3 albedo, InputData inputData)
+            float3 LightLoop(float3 albedo, InputData inputData)
             {
                 float3 lighting = 0;
 
                 Light mainLight = GetMainLight();
-                lighting += MyLightingFunction(albedo, inputData.normalWS, mainLight);
+                lighting += Lighting(albedo, inputData.normalWS, mainLight);
 
                 #if defined(_ADDITIONAL_LIGHTS)
                 uint pixelLightCount = GetAdditionalLightsCount();
                 LIGHT_LOOP_BEGIN(pixelLightCount)
                     Light additionalLight = GetAdditionalLight(lightIndex, inputData.positionWS, half4(1,1,1,1));
-                    lighting += MyLightingFunction(albedo, inputData.normalWS, additionalLight);
+                    lighting += LightingFunction(albedo, inputData.normalWS, additionalLight);
                 LIGHT_LOOP_END
                 #endif
 
@@ -143,12 +147,9 @@ Shader "Legacy Shaders/diffuse-worldspace-smooth" {
                 float3 ambientSH = SampleSH(inputData.normalWS);
                 inputData.bakedGI = lerp(bakedDirectional, ambientSH, 0.7);inputData.positionCS = IN.positionHCS;
 
-                
-
                 float3 indirect = inputData.bakedGI + inputData.vertexLighting;
-                float3 lighting = MyLightLoop(albedo, inputData) + albedo * indirect;
+                float3 lighting = LightLoop(albedo, inputData) + albedo * indirect;
 
-                
                 half4 finalColor = half4(lighting, 1);
                 return finalColor;
 
@@ -160,8 +161,6 @@ Shader "Legacy Shaders/diffuse-worldspace-smooth" {
         {
             Name "DepthOnly"
             Tags { "LightMode" = "DepthOnly" }
-
-            
 
             ZWrite On
             ColorMask 0
