@@ -86,7 +86,6 @@ public class MapGenerator : MonoBehaviour
 
         GridCell startCell = null;
 
-        //set the starting room position
         while(startCell == null){
             spawnX = Random.Range(0, drawer.cellWidth - 5);
             spawnY = Random.Range(1, drawer.cellHeight - 2);
@@ -119,9 +118,9 @@ public class MapGenerator : MonoBehaviour
         yield return StartCoroutine(loadScreen.SetText("Spawning Rooms..."));
         WaitForEndOfFrame frame = new();
 
-        //try spawning rooms on loop, up to a specified number of attempts
+        //spawn rooms in a loop, so that it is gauranteed to exit
         for(int i = 0; i < tries; i++){
-            if(currentRooms == maxRooms) break; //break out of the loop once everything is generated
+            if(currentRooms == maxRooms) break;
             currentRooms ++;
             valid = false;
 
@@ -129,7 +128,7 @@ public class MapGenerator : MonoBehaviour
             int randomY = Random.Range(0, drawer.cellHeight);
             int randomRoom = Random.Range(0, roomPrefs.Length);
             int rot = Random.Range(0,4);
-            //initialize the room
+
             GameObject room = Instantiate(roomPrefs[randomRoom]);
             room.transform.rotation = Quaternion.Euler( new Vector3(0,90*rot,0));
             room.transform.position = new Vector3(randomX * cellSize, 0, randomY * cellSize);
@@ -143,7 +142,6 @@ public class MapGenerator : MonoBehaviour
             } while(!valid);
 
             if(invalidRoom) continue;
-
 
             invalidRoom = false;
             
@@ -162,7 +160,6 @@ public class MapGenerator : MonoBehaviour
                 doorCells.Add(cells);
         }
 
-        //proceed to hallway generation
         StartCoroutine(GenerateHallways());
     }
 
@@ -170,12 +167,11 @@ public class MapGenerator : MonoBehaviour
         
         WaitForEndOfFrame frame = new();
 
-        //loop through every room's doors, so each doorway is guaranteed to have a 
+        //loop through every room's doors, so each doorway is guaranteed to have a connecting path
         for(int i = 0; i < doorCells.Count; i++){
 
-            if(doorCells[i].Count == 0) continue; //edge case for empty lists
+            if(doorCells[i].Count == 0) continue;
 
-            //loop through every individual door per room
             for(int j = 0; j < doorCells[i].Count; j++){
                 int randI, randJ;
 
@@ -187,12 +183,11 @@ public class MapGenerator : MonoBehaviour
 
                 List<GridCell> path = HallwayGeneration.FindPath(grid, doorCells[i][j], doorCells[randI][randJ]);
 
-                //update the data in gridcells for when the objects are instantiated
+               
                 foreach(GridCell cell in path){
                     if(cell == null || cell.isHallway || cell.isHome || cell.used) continue;
                     cell.isHallway = true;
 
-                    //update the meta-data for all hallway cells, and their neighbors
                     HallwayGrid(cell);
                     HallwayGrid(grid.GetValue(cell.x+1, cell.y));
                     HallwayGrid(grid.GetValue(cell.x-1, cell.y));
@@ -203,7 +198,6 @@ public class MapGenerator : MonoBehaviour
             }
         }
 
-        //continue to spawning hallways
         StartCoroutine(SpawnHallways());
     }
 
@@ -302,9 +296,8 @@ public class MapGenerator : MonoBehaviour
                 if(!cell.isHallway)continue;
                 GameObject spawn;
 
-                Hallway hall = hallways[(int)cell.areaType]; //note for later: update the index to the biome index once the prefabs have been made
+                Hallway hall = hallways[(int)cell.areaType];
 
-                //select the correct prefab to spawn based on the hallway type
                 switch(cell.hallwayType){
                     case HallwayType.Quad:
                         spawn = hall.quad[Random.Range(0, hall.quad.Length)];
@@ -322,7 +315,6 @@ public class MapGenerator : MonoBehaviour
                     
                 }
 
-                //initialize the hallway
                 GameObject spawnedHall = Instantiate(spawn);
                 IGenerate generate = spawnedHall.GetComponent<IGenerate>();
                 spawnedHall.transform.position = new Vector3(cell.x * cellSize, 0, cell.y * cellSize);
@@ -369,7 +361,7 @@ using UnityEngine;
 
 public static class HallwayGeneration
 {
-    //uses the A* pathfinding algorithm to get the points
+
     public static readonly float hallwayPreference = 0.2f;
 
 
@@ -495,10 +487,8 @@ public class AStar : MonoBehaviour
             short nx = (short)(cell.x + directions[i, 0]);
             short ny = (short)(cell.y + directions[i, 1]);
 
-            if(grid.GetValue(nx, ny) != null){ //null check
-
+            if(grid.GetValue(nx, ny) != null){
                 GridCell neighbor = grid.GetValue(nx, ny);
-                //ignore used tiles
                 if(!neighbor.used || neighbor == destination){
                     neighbors.Add(neighbor);
                 }
@@ -529,19 +519,18 @@ public class AStar : MonoBehaviour
 
             //check every neighbor
             foreach(var neighborCell in GetNeighbors(grid, current.cell, target)) {
-                if(closedSet.Contains(neighborCell)) continue; //skip already calculated neighbors
+                if(closedSet.Contains(neighborCell)) continue;
 
                 float cost = Cost(neighborCell);
-                if(cost == -1){continue;} // skip certain nodes when its cost is -1
+                if(cost == -1){continue;}
 
-                float tentativeG = current.gCost + cost; //uniform cost for nodes
-
+                float tentativeG = current.gCost + cost;
                 if(!nodeMap.TryGetValue(neighborCell, out var neighborNode)) {
-    neighborNode = new PathNode(neighborCell) {
-        gCost = float.MaxValue
-    };
-    nodeMap[neighborCell] = neighborNode;
-}
+                    neighborNode = new PathNode(neighborCell) {
+                        gCost = float.MaxValue
+                    };
+                    nodeMap[neighborCell] = neighborNode;
+                }
 
                 if(tentativeG < neighborNode.gCost || !openSet.Contains(neighborNode)){
                     neighborNode.gCost = tentativeG;
@@ -554,7 +543,7 @@ public class AStar : MonoBehaviour
             }
         }
 
-        return new(); // no path found
+        return new();
     }
 
     public static List<GridCell> ReconstructPath(PathNode endNode) {
@@ -567,7 +556,7 @@ public class AStar : MonoBehaviour
         path.Reverse();
 
         if(path.Count >= 2)
-            path.RemoveAt(0); //remove start
+            path.RemoveAt(0);
         return path;
     }
 }
@@ -768,7 +757,6 @@ public class RoomData : MonoBehaviour, IGenerate
         //apply padding
         for (int row = -1; row <= rooms.Length; row++) {
             for (int col = -1; col <= rooms[0].row.Length; col++) {
-                // Skip actual room cells
                 if (row >= 0 && row < rooms.Length && col >= 0 && col < rooms[0].row.Length)
                     if (!rooms[row].row[col].ignore)
                         continue;

@@ -91,7 +91,6 @@ void main_loop(short* grid, int gridSize, int iterations){
     PrintGrid(grid,gridSize);
     sleep_ms(WAIT_TIME_MS);
     for(int i = 0; i < iterations; i++){
-        // mark cell
         for(int y = 0; y < gridSize; y++){
             for(int x = 0; x < gridSize; x++){
                 int gridIndex = gridIndex(x,y,gridSize);
@@ -102,7 +101,6 @@ void main_loop(short* grid, int gridSize, int iterations){
             }
         }
 
-        // apply cells
         numAlive = 0;
         numChanged = 0;
         for(int y = 0; y < gridSize; y++){
@@ -123,7 +121,7 @@ void main_loop(short* grid, int gridSize, int iterations){
 
         PrintGrid(grid, gridSize);
         sleep_ms(WAIT_TIME_MS);
-        if(numAlive == 0 || numChanged == 0) return; // exit when there are no living cells
+        if(numAlive == 0 || numChanged == 0) return;
     }
 }
 
@@ -141,7 +139,7 @@ int load_grid_from_file(const char* filename, short** outGrid, int* outSize) {
         if (buffer[fileLength-1] == '\n') buffer[--fileLength] = '\0';
 
         if (cols == 0) cols = fileLength;
-        else if (fileLength != cols){ // break if the row lengths are not all the same
+        else if (fileLength != cols){
             fclose(file);
             return 0;
         }
@@ -152,7 +150,6 @@ int load_grid_from_file(const char* filename, short** outGrid, int* outSize) {
     *outGrid = malloc(sizeof(short) * rows * cols);
     *outSize = rows;
 
-    // fill the grid
     fseek(file, 0, SEEK_SET);
     int r = 0;
     while (fgets(buffer, sizeof(buffer), file)) {
@@ -201,7 +198,6 @@ int main(int argc, char *argv[]){
 
 
     main_loop(grid, gridSize, iterations);
-
 
     do{
         printf("Continue Simulation (input -1 to stop, otherwise input number of iterations): ");

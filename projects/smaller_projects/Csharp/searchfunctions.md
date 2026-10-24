@@ -102,7 +102,7 @@ public List<string> Dijkstra(string from, string to, Func<string, int> edgeCost,
 
             if(parent.ContainsKey(dest)) continue;
 
-            // apply an optional constrain, like for example skip all nodes not in the same room
+            // apply an optional constrain, for example skip all nodes not in the same room
             if(constraint != null && !constraint(dest)) continue;
 
             parent[dest] = (node, edge);

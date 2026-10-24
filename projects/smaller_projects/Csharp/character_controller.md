@@ -54,8 +54,6 @@ public class Movement : MonoBehaviour
     [Space(10)]
     [Header("keycodes")]
    
-    //movement keycodes
-
     private InputAction move;
     private InputAction jump;
 
@@ -67,8 +65,8 @@ public class Movement : MonoBehaviour
 
     private Vector2 currentInputVector;
 
-    private Vector3[] forceVectors = new Vector3[2];//array to store the different force vectors.
-    
+    private Vector3[] forceVectors = new Vector3[2];
+
     private bool hasInput = true;
     public LayerMask groundLayerMask;
 
@@ -96,16 +94,13 @@ public class Movement : MonoBehaviour
         jump.Disable();
         jump.performed -= Jump;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    void Start(){
         jumps = 0;
         soundEffectSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         float targetAngle = 0;
         Inputs();
         float deadZone = 0.02f;
@@ -172,7 +167,7 @@ public class Movement : MonoBehaviour
         Vector3 cameraRight = Camera.main.transform.right;
 
 
-        rbody.AddForce(new Vector3 (0, (-gravity * rbody.mass), 0)); //apply gravity
+        rbody.AddForce(new Vector3 (0, (-gravity * rbody.mass), 0));
 
         targetVelocity = cameraRight * horizontal + cameraForward * vertical;
         targetVelocity.Normalize();

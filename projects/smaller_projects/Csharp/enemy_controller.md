@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
 
     private List<Vector3> pendingChasePath = null;
     private bool isComputingPath = false;
-    [SerializeField] private float chaseUpdateInterval = 0.4f; // update path every 0.4 seconds
+    [SerializeField] private float chaseUpdateInterval = 0.4f;
     private float chaseTimer = 0f;
 
     void Awake(){
@@ -62,16 +62,14 @@ public class EnemyController : MonoBehaviour
         chaseTimer = 0f;
         isComputingPath = true;
 
-        // Capture Unity data on main thread
         GridCell startCell = pathFinding.currentCell;
         GridCell playerCell = pathFinding.GetGridFromTransform(target);
 
-        // Run A* on background thread
+        // Run A* on background thread, to reduce main thread compute pressure
         System.Threading.Tasks.Task.Run(() =>{
             var path = pathFinding.GetChasePath(startCell, playerCell);
             var worldPath = pathFinding.GetPathAsCoordinates(path);
 
-            // Store result for main thread
             pendingChasePath = worldPath;
 
             if(pendingChasePath.Count == 0){
@@ -221,7 +219,7 @@ public class EnemyMovementManager : MonoBehaviour
     }
 
     void FixedUpdate(){
-        rbody.AddForce(new Vector3 (0, (-gravityForce * rbody.mass), 0)); //apply gravity
+        rbody.AddForce(new Vector3 (0, (-gravityForce * rbody.mass), 0));
         grounded = Physics.Raycast(transform.position, Vector3.down, hoverHeight + 0.01f, groundLayerMask);
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, hoverHeight * 2f) && grounded){
             float distance = hit.distance;

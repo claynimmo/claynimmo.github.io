@@ -63,7 +63,6 @@ public class MapOutputEncoder : MonoBehaviour{
         worker?.Dispose();
     }
 
-    // function to map all sprites to integers, allowing for it to be emit in a usable tensor
     void RegisterAssets(){
         foreach(Sprite s in hallways)
             hallwaySet.Add(s);
@@ -96,7 +95,6 @@ public class MapOutputEncoder : MonoBehaviour{
         return dst;
     }
 
-    // create a tensor to be input in the ML model
     private static Tensor CreateTensor(float[,,,] arr){
         int N = arr.GetLength(0);
         int H = arr.GetLength(1);
@@ -173,9 +171,7 @@ public class MapOutputEncoder : MonoBehaviour{
         TrainingAugments a = new();
         OutputToFile(groundTruth, groundTruthPath, cellWidth, cellHeight);
 
-        AddToJson(groundTruthPath, a.AllPerfect(groundTruth, cellWidth, cellHeight), 1, filePath+"perfect"+mapCode, cellWidth, cellHeight); // add the ground truth and write it to a file
-
-        // get the augmented training data tensors and the score
+        AddToJson(groundTruthPath, a.AllPerfect(groundTruth, cellWidth, cellHeight), 1, filePath+"perfect"+mapCode, cellWidth, cellHeight); 
         var (extendedHallwayLeft,  extendedHallwayLeftScore)  = a.ExtendHallwayHorizontal(groundTruth, cellWidth, cellHeight, 0);
         var (extendedHallwayRight, extendedHallwayRightScore) = a.ExtendHallwayHorizontal(groundTruth, cellWidth, cellHeight, 1);
         var (extendedHallwayUp,  extendedHallwayUpScore)      = a.ExtendHallwayVertical(groundTruth, cellWidth, cellHeight, 1);
@@ -191,7 +187,7 @@ public class MapOutputEncoder : MonoBehaviour{
         var (combined, combinedScore) = a.CombinedErrors(groundTruth, cellWidth, cellHeight);
         var (hallwaysGoodRoomsBad, hallwaysGoodRoomsBadScore) = a.PerfectHallwaysWrongRooms(groundTruth, cellWidth, cellHeight);
 
-        // add the truth, input, output mapping to a json file, while saving the tensor itself to binary
+
         if(extendedHallwayLeftScore != -1) {AddToJson(groundTruthPath, extendedHallwayLeft, extendedHallwayLeftScore,  filePath+"leftextended"+mapCode, cellWidth, cellHeight);}
         if(extendedHallwayRightScore != -1){AddToJson(groundTruthPath, extendedHallwayRight,extendedHallwayRightScore, filePath+"rightextended"+mapCode, cellWidth, cellHeight);}
         if(extendedHallwayUpScore != -1)   {AddToJson(groundTruthPath, extendedHallwayUp,   extendedHallwayUpScore,    filePath+"upextended"+mapCode, cellWidth, cellHeight);}
@@ -209,8 +205,7 @@ public class MapOutputEncoder : MonoBehaviour{
         AddToJson(groundTruthPath, a.AllGone(cellWidth, cellHeight), 0, filePath+"nothing"+mapCode, cellWidth, cellHeight);
     }
 
-  
-    // output a tensor to a binary file
+
     private void OutputToFile(float[,,] tensor, string filePath, int cellWidth, int cellHeight){
         using (BinaryWriter writer = new(File.Open(filePath, FileMode.Create))) {
             for (int x = 0; x < cellWidth; x++)
@@ -221,7 +216,6 @@ public class MapOutputEncoder : MonoBehaviour{
         Debug.Log("ouput to " + filePath);
     }
 
-    // create a line in json for the supervised training data
     private void AddToJson(string groundTruthPath, float[,,] input, float score, string filePath, int cellWidth, int cellHeight){
         OutputToFile(input, filePath, cellWidth, cellHeight);
 
@@ -266,12 +260,10 @@ public class MapOutputEncoder : MonoBehaviour{
         return tensor;
     }
 
-    // initialize a default tensor with the proper shapes
     public static float[,,] InitializeTensor(int cellWidth, int cellHeight){
         return new float[cellWidth,cellHeight,channelCount];
     }
-
-    // maps the area colour to its index, to reduce channels from 4 (rgba) to 1
+    
     private static int AreaColor(Color col){
         if (col == Color.green)   return (int)AreaType.Green;
         if (col == Color.yellow)  return (int)AreaType.Yellow;

@@ -37,7 +37,7 @@ public class SubstringSearch {
 
         while (i <= n - m) {
             int j = LastUnequalChar(p, t, i);
-            if (j == -1) { return i; }    // equal!
+            if (j == -1) { return i; }
             if (i == n - m){ break;}
 
             // look ahead one l gram, using a char buffer
@@ -63,7 +63,6 @@ public class SubstringSearch {
 
         int m = pattern.Length;
 
-        // construct l grams,
         for(int i = 0; i <= m - l; i ++){
             for(int j = 0; j < l; j++){
                 buffer[j] = pattern[i+j];
@@ -76,7 +75,6 @@ public class SubstringSearch {
         return dict;
     }
 
-    // Returns the optimal value of l for the given pattern length m
     static public int OptimalL(int m){
         if(m >= 750){
             return 6;
