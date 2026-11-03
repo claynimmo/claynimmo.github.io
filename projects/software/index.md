@@ -10,7 +10,7 @@ title: Portfolio | Software Projects
 <table class="table-card">
   <tr>
     <td>
-      <strong>Fitcast:</strong><br>
+      <strong>Fitcast</strong><br>
       FitCast combines weather and clothing data to recommend the most comfortable outfit for the day. The app was developed in Java, in a team of 6 prioritizing the agile development process. I took the role of the lead programmer, ensuring that the other member's code integrated well into the project focusing on scalability.
     <br><br>
     <a href="fitcast.html">More details (WIP)</a><br>
@@ -40,12 +40,11 @@ title: Portfolio | Software Projects
 <table class="table-card">
   <tr>
     <td>
-      <strong>Network Shared USB:</strong><br>
+      <strong>Network Shared USB</strong><br>
       A web page constructed using PHP designed to be hosted from a raspberry pi device, to expose its connected USB drive across the local network.
     <br><br>
     <a href="networksharedusb.html">More details (WIP)</a><br>
     <a href="https://github.com/claynimmo/Network-Shared-USB-with-PHP">Repository</a>
-    </td>
     </td>
     <td class="table-card-side">
         <strong>HTML, CSS, PHP</strong>
@@ -56,7 +55,7 @@ title: Portfolio | Software Projects
 <table class="table-card">
   <tr>
     <td>
-      <strong>Basic Image Processing:</strong><br>
+      <strong>Basic Image Processing</strong><br>
        A windows only console app that I use to process png screenshots into usable game textures. It includes filters like saturation, exposure, blur, colour inversion, normalization, and height map generation.
     <br><br>
     <a href="basicimageprocessing.html">More details</a><br>

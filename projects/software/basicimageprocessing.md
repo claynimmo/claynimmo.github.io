@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Portfolio |  Basic Image Processing
 ---
 
