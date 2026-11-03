@@ -16,7 +16,7 @@ The design report highlighting the circuit design process is can be viewed throu
 The data is retrieved on the Arduino itself, through an input pin. The data is sampled through an interrupt, and sent when a flag is set across the serial.
 
 The following code block demonstrates the interrupt used to sample the voltage, where it is configured to use prescaler 64, free running mode, at 19230Hz. The code uses two buffers, so that the program does not stall and skip samples when sending the package across serial.
-```C
+```c
 // ADC interup, running at 19230Hz independent to the main loop
 ISR(ADC_vect) {
   static uint16_t index = 0;
@@ -45,7 +45,7 @@ ISR(ADC_vect) {
 ```
 
 The following code block demonstrates how the data is sent through serial. Each package is sent after heading, since a start/stop command is also sent through the network, and so the heading lets the code know not to interpret the following data as a command.
-```C
+```c
 void sendHeader(uint8_t type) {
   // send two known signals, to make the reciever less prone to stopping during the data logging
   Serial.write(0xAA);
@@ -81,7 +81,7 @@ The data sent through the serial is monitored using a python script and stored, 
 
 This process has two important functions, to wait for a packet, and to read a set number of bytes from the stream. The code for these sections are given in the code block:
 
-```Python
+```python
 def read_bytes_from_stream(ser: serial.Serial, n : int):
     """
     Repeated read from the serial port until n bytes have been retrieved

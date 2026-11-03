@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Portfolio | Packages
 ---
 
@@ -9,7 +10,7 @@ This page contains the links to the publicly available, ready to import, package
   <tr>
     <td>
       <strong>Editor Tools</strong><br>
-      A package including useful editor tools to speed up game development
+      A package including useful editor tools to speed up game development, including custom gizmos and hierarchy functions.
     <br><br>
     <a href="editortoolspackage.html">More details</a><br>
     <a href="https://github.com/claynimmo/Unity-Editor-Tools-Package">Repository</a>
@@ -21,7 +22,7 @@ This page contains the links to the publicly available, ready to import, package
   <tr>
     <td>
       <strong>Custom UI Package</strong><br>
-      UI Package encapsulating some the the UI used in Rebirth of the Forsaken
+      UI Package encapsulating some the the UI used in Rebirth of the Forsaken, including the code to navigate the inventory via keyboard, and the dialogue boxes.
     <br><br>
     <a href="customuipackage.html">More details (WIP)</a><br>
     <a href="https://github.com/claynimmo/Custom-UI-Package-for-Unity-Engine">Repository</a>
