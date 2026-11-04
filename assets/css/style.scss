@@ -4,6 +4,10 @@
 @import "jekyll-theme-cayman";
 @import "syntax.css";
 
+.page-header {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
 
 * {
     transition: all 0.25s ease;
@@ -80,6 +84,19 @@ header h1 {
   justify-content: center;
 }
 
+.dropdown{
+  border-color: #43cea2;
+  border-radius: 4px;
+  border-width: 2px;
+  background-color: #0f1115 !important;
+  width: 150px;
+}
+.dropdown:focus,
+.dropdown:focus-visible {
+  border-color: #185a9d;
+  outline: none;
+}
+
 .navbutton {
   display: flex;
   justify-content: center; 
@@ -111,4 +128,36 @@ div.scroll-container {
 
 div.scroll-container img {
   padding: 10px;
+}
+
+.tutorial-scroll {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-content: start;
+}
+
+.tutorial-entry a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 12px;
+  background-color: #185a9d;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  color: white !important;
+  text-decoration: none;
+  box-shadow: 0 0 8px #185a9d;
+  font-size: 15px;
+}
+
+.tutorial-entry a:hover{
+  background-color: #058753;
+  box-shadow: 0 0 16px #058753;
+  text-decoration: none;
 }
