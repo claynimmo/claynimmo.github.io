@@ -10,6 +10,6 @@ The shadergraph file for the eclipse shader. This shader creates a fresnel glow 
 
 <img src="/assets/files/shaders/images/eclipse.gif" alt="Eclipse shader">
 
-<a href="/assets/files/shaders/eclipse.shadergraph" download>
+<a href="/assets/files/shaders/eclipse.shadergraph" class="yellow-link" download>
     Download eclipse.shadergraph
 </a>

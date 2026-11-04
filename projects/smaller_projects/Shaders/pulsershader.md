@@ -10,6 +10,6 @@ The shadergraph file for the pulse shader. The shader was originally made to att
 
 <img src="/assets/files/shaders/images/edgepulser.gif" alt="Pulse shader">
 
-<a href="/assets/files/shaders/edgepulser.shadergraph" download>
+<a href="/assets/files/shaders/edgepulser.shadergraph" class="yellow-link" download>
     Download edgepulser.shadergraph
 </a>

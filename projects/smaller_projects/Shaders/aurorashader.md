@@ -10,6 +10,6 @@ The shadergraph file for the aurora shader.
 
 <img src="/assets/files/shaders/images/aurora.gif" alt="Aurora shader">
 
-<a href="/assets/files/shaders/aurora.shadergraph" download>
+<a href="/assets/files/shaders/aurora.shadergraph" class="yellow-link" download>
     Download aurora.shadergraph
 </a>

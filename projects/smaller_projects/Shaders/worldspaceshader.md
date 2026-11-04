@@ -10,7 +10,7 @@ This shader was written to tile textures on world scaling rather than local UVs,
 
 <img src="/assets/files/shaders/images/worldtile.png" alt="Aurora shader">
 
-<a href="/assets/files/shaders/WorldTiling.shadergraph" download>
+<a href="/assets/files/shaders/WorldTiling.shadergraph" class="yellow-link" download>
     Download WorldTiling.shadergraph
 </a>
 
