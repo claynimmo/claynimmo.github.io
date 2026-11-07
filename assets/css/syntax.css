@@ -72,3 +72,22 @@
 .highlight .ss {
   color: #a1b56c !important;
 }
+
+code.highlighter-rouge,
+p code,
+li code,
+td code {
+    background-color: #1a1a1a !important;
+    color: #9CDCFE !important;
+    padding: 0.15em 0.35em !important;
+    border-radius: 4px;
+    border: 1px solid #333 !important;
+    font-size: 0.9em;
+}
+
+pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+}

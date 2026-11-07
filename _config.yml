@@ -9,6 +9,7 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  mathjax: true
 
 defaults:
   - scope:

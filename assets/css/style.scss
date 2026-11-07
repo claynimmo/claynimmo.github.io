@@ -9,6 +9,7 @@
     padding-bottom: 1rem !important;
 }
 
+
 * {
     transition: all 0.25s ease;
 }
@@ -20,7 +21,7 @@ body {
     background-color: #0f1115 !important;
 }
 
-p {
+p, ul, li, span, nobr{
   color: rgb(189, 186, 186) !important;
 }
 
