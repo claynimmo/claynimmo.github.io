@@ -8,7 +8,7 @@ title: Portfolio | Tutorials
 ### Tutorials
 
 {% assign tutorial_pages = site.pages
-  | where_exp: "p", "p.dir == page.dir" %}
+  | where_exp: "p", "p.dir contains page.dir" %}
 
 {% assign all_tags = "" | split: "" %}
 
@@ -27,8 +27,6 @@ title: Portfolio | Tutorials
     {% for tag in all_tags %}<option value="{{ tag }}">{{ tag }}</option>{% endfor %}
 </select>
 
-
-<div id="tutorial-list">
 
 <table class="table-card">
   <tr>
@@ -55,21 +53,18 @@ title: Portfolio | Tutorials
     </td>
   </tr>
 </table>
-</div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const filter = document.getElementById("tag-filter");
 
     filter.addEventListener("change", () => {
         const selected = filter.value;
-
         document.querySelectorAll(".tutorial-entry").forEach(entry => {
-            if (selected === "all") {
+            if(selected === "all"){
                 entry.style.display = "";
                 return;
             }
-
             const tags = entry.dataset.tags
                 .split(",")
                 .map(t => t.trim());
