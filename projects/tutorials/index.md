@@ -8,7 +8,8 @@ title: Portfolio | Tutorials
 ### Tutorials
 
 {% assign tutorial_pages = site.pages
-  | where_exp: "p", "p.dir contains page.dir" %}
+  | where_exp: "p", "p.dir contains page.dir"
+  | sort: "title" %}
 
 {% assign all_tags = "" | split: "" %}
 

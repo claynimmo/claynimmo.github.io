@@ -162,12 +162,11 @@ public void LoadDefaultSettingsFromFile(){
     string json = jsonFile.text;
 
     SettingsValues newSettings = JsonUtility.FromJson<SettingsValues>(json);
+    settings = newSettings;
     sensitivity.value = settings.cameraSensitivity;
     musicVolume.value = settings.musicVolume;
     otherVolume.value = settings.otherVolume;
     
-    settings = newSettings;
-
     Resources.UnloadAsset(jsonFile);
 }
 ```
@@ -203,11 +202,11 @@ public class Settings
         string json = jsonFile.text;
 
         SettingsValues newSettings = JsonUtility.FromJson<SettingsValues>(json);
+        settings = newSettings;
         sensitivity.value = settings.cameraSensitivity;
         musicVolume.value = settings.musicVolume;
         otherVolume.value = settings.otherVolume;
         
-        settings = newSettings;
 
         Resources.UnloadAsset(jsonFile);
     }
