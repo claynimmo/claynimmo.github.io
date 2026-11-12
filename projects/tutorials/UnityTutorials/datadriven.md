@@ -91,8 +91,6 @@ public class Settings
     private const string presetFileName = "SaveData/settings_preset.json";
 
     [SerializeField] private Slider sensitivity;
-    [SerializeField] private Slider cameraDistance;
-
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider otherVolume;
 
@@ -186,8 +184,6 @@ public class Settings
     private const string presetFileName = "SaveData/settings_preset.json";
 
     [SerializeField] private Slider sensitivity;
-    [SerializeField] private Slider cameraDistance;
-
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider otherVolume;
 
@@ -206,7 +202,6 @@ public class Settings
         sensitivity.value = settings.cameraSensitivity;
         musicVolume.value = settings.musicVolume;
         otherVolume.value = settings.otherVolume;
-        
 
         Resources.UnloadAsset(jsonFile);
     }
