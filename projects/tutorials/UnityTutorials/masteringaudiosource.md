@@ -10,6 +10,7 @@ tags: [Unity Engine, Programming]
 Unity’s `AudioSource` component is crucial for adding sound effects and music to a project. The component has a wide variety of tools allowing for a range of techniques to spread audio assets further.
 
 ## AudioSource Properties
+
 The `AudioSource` has the following important properties to configure:
 -	Priority: Unity has a maximum number of `AudioSources` that can play at once, set via project settings. Sources with a lower value are higher priority. Unity is more likely to play sources with the lowest value, and uses volume as a tie breaker (louder sources are prioritized). Priority does not matter for WebGL builds.
 -	Volume: determines the playback sound of the source. While it maximises at 1 in the editor, `PlayOneShot` can use a higher volume, but take care to avoid clipping.
@@ -33,7 +34,7 @@ Background music is the most effective part of sound design to set the atmospher
 
 ### Fading Between Songs
 
-If the two audio tracks are vastly different and cannot be effectively mixed, the best method is to fade out the current track, and fade in the next. This is the method I used in my game Rebirth of the Forsaken. Alternatively, crossfading can be used for a more seamless transition, using two audio sources fading in and out at the same time.
+If the two audio tracks are vastly different and cannot be effectively mixed, the best method is to fade out the current track, and fade in the next. This is the method I used in my game *Rebirth of the Forsaken*. Alternatively, crossfading can be used for a more seamless transition, using two audio sources fading in and out at the same time.
 
 ```csharp
 public AudioSource audiosource;
@@ -143,17 +144,18 @@ The performance of audio has very little to do with 3D spatial effects, or mixer
 -	Decompress on Load: on start, it loads the audio into memory for minimal performance overhead when playing the sound. This should be used for small clips.
 -	Compressed in Memory: decompress audio clips when playing, but leave compressed in memory. It uses less memory than decompress on load, at the cost of higher overhead when decompressing the audio.
 -	Streaming: reads the audio from disk continuously, using almost no RAM. This is best used for background music.
-With many different background audio tracks, it is very important to set it to streaming. As an example, memory profile of my game Rebirth of the Forsaken, with decompress on load, and with streaming for the background music.
+With many different background audio tracks, it is very important to set it to streaming. As an example, memory profile of *Rebirth of the Forsaken*, using both decompress on load and streaming.
+
+Vorbis compression quality can further reduce the memory impact, at the cost of a reduction in audio quality. Usually, background noises can get away with a much lower quality. Background music and core sound effects, however, should remain high (>80%).
 
 ### Memory Profile with Decompress on Load
 
 From the profile, the audio takes up almost 200MB of RAM at all times. Since only one of dozen music tracks are playing at once, most of this memory is wasted.
 
-
 <img src="/assets/files/tutorials/images/audio_memprofile_decompress.png" alt="Decompress on Load Memory Profile. Textures take of 0.67GB, and Audio takes up 192.6MB">
 
 ### Memory Profile with Streaming
 
-Setting the load option to streaming reduced the memory load by 40x to only 5.5MB, which is a significant reduction. This significant improvement came at the cost of a very minor framerate reduction due to disk operations; however, the reduced memory improves the user experience significantly more, by supporting a wider range of devices. Streaming is mandatory for mobile games, due to the low memory constraint.
+Setting the load option to streaming reduced the memory load by 40x, reducing to 5.5MB. This significant improvement came at the cost of a very minor framerate reduction due to disk operations; however, the reduced memory improves the user experience significantly more, by supporting a wider range of devices. Streaming is mandatory for mobile games, due to the low memory constraint. Note that the memory improvement is only for audio referenced inside the scene. Leaving a long audio file on decompress on load will have no memory footprint if unused.
 
 <img src="/assets/files/tutorials/images/audio_memprofile_streaming.png" alt="Streaming Memory Profile. Textures take of 0.67GB, and Audio takes up onlt 5.5MB">
