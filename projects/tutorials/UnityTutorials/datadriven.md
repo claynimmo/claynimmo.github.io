@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data Driven Programming in Unity
+title: Data Driven Programming for Games
 tags: [Unity Engine, Programming, Data]
 ---
 

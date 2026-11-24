@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using the Skybox to Render Background Geometry in Unity
+title: Using the Skybox to Render Background Geometry
 tags: [Unity Engine, Assets]
 ---
 

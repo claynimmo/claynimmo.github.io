@@ -1,6 +1,6 @@
 ---
 layout: default
-title: First to Third Person Camera in Unity
+title: First to Third Person Camera
 tags: [Unity Engine, Programming]
 ---
 
